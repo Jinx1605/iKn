@@ -1,0 +1,39 @@
+{
+  "name": "ikn-icon-widget",
+  "version": "1.0.0",
+  "description": "Embeddable JavaScript widget for creating OTF editable icons that conform to Apple macOS and iOS design guidelines",
+  "main": "icon-widget.js",
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "demo": "python3 -m http.server 8080 && open http://localhost:8080/demo.html"
+  },
+  "keywords": [
+    "icon",
+    "widget",
+    "apple",
+    "macos",
+    "ios",
+    "design",
+    "embeddable",
+    "javascript",
+    "ui",
+    "component"
+  ],
+  "author": "iKn Project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jinx1605/iKn.git"
+  },
+  "files": [
+    "icon-widget.js",
+    "demo.html",
+    "README.md"
+  ],
+  "browserslist": [
+    "Chrome >= 60",
+    "Firefox >= 55",
+    "Safari >= 12",
+    "Edge >= 79"
+  ]
+}

@@ -1,0 +1,194 @@
+/* 
+ * iKn Icon Widget - Optional CSS Styles
+ * These styles enhance the widget appearance and can be customized
+ */
+
+/* Base widget container styles */
+.ikn-widget {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Icon container enhancements */
+.ikn-icon-container {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ikn-icon-container:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.ikn-icon-container:active {
+    transform: translateY(0) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+/* Editor panel animations */
+.ikn-editor {
+    animation: slideIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: top;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Icon option buttons */
+.ikn-icon-option {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ikn-icon-option:hover {
+    transform: scale(1.05);
+    border-color: #007AFF !important;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+.ikn-icon-option:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+/* Color inputs styling */
+.ikn-bg-color,
+.ikn-icon-color {
+    transition: all 0.2s ease;
+}
+
+.ikn-bg-color:hover,
+.ikn-icon-color:hover {
+    border-color: #007AFF;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+/* Slider styling */
+.ikn-radius {
+    -webkit-appearance: none;
+    appearance: none;
+    transition: all 0.2s ease;
+}
+
+.ikn-radius::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007AFF;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.ikn-radius::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ikn-radius::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007AFF;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.ikn-radius::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Download button */
+.ikn-download {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.ikn-download:hover {
+    background: #0056CC;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.ikn-download:active {
+    transform: translateY(0);
+    transition: all 0.1s ease;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .ikn-editor {
+        background: rgba(28, 28, 30, 0.95);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .ikn-editor label {
+        color: #f2f2f7 !important;
+    }
+    
+    .ikn-icon-option {
+        background: #1c1c1e;
+        border-color: #48484a;
+    }
+    
+    .ikn-icon-option svg {
+        fill: #f2f2f7;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .ikn-editor {
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .ikn-icon-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Accessibility enhancements */
+.ikn-icon-container:focus-visible,
+.ikn-icon-option:focus-visible,
+.ikn-download:focus-visible {
+    outline: 3px solid #007AFF;
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .ikn-icon-container,
+    .ikn-icon-option,
+    .ikn-download,
+    .ikn-radius::-webkit-slider-thumb,
+    .ikn-radius::-moz-range-thumb {
+        transition: none;
+    }
+    
+    .ikn-editor {
+        animation: none;
+    }
+    
+    .ikn-icon-container:hover {
+        transform: none;
+    }
+}
